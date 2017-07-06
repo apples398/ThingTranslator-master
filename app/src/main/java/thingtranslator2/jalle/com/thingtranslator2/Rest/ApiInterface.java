@@ -20,7 +20,7 @@ public interface ApiInterface {
     @POST("upload")
     Call<Translation> upload(@Part("image\"; filename=\"pic.jpg\" ") RequestBody file, @Part("FirstName") RequestBody langCode1);
 
-    final OkHttpClient okHttpClient = new OkHttpClient.Builder()
+    OkHttpClient okHttpClient = new OkHttpClient.Builder()
             .readTimeout(60, TimeUnit.SECONDS)
             .connectTimeout(60, TimeUnit.SECONDS)
             .build();
